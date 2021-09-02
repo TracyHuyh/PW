@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en" class="hydrated">
+<head>
+<meta charset="utf-8">
+	<style data-styles>ion-icon{visibility: hidden}.hydrated{visibility: inherit} </style>
+<title>PersonalWebsite</title>
+</head>
+
+<style>
+	html{
+		font-size: 62.5%;
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+	}
+	body{
+		font-family: "Montserrat", sans-serif;
+		line-height: 1;
+		font-weight: 400;
+		color: #333333;
+	}
+	
+	.logo:link,
+	.logo:visited{
+		font-size: 57.6px;
+		text-decoration: none;
+		font-weight: 700;
+		color:#4D706C;
+		transition: all 0.3s;
+	}
+	.logo:hover,
+	.logo:active{
+		color: beige;
+	}
+	.main-nav-list{
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap:4.8rem;
+	}
+	.main-nav-link:link,
+	.main-nav-link:visited{
+		display: inline-block;
+		text-decoration: none;
+		color: #333333;
+		font-weight: 700;
+		font-size: 2rem;
+		transition: all 0.3s;
+	}
+	.main-nav-link:hover,
+	.main-nav-link:active{
+		color:#459292;
+	}
+	.mobile-nav{
+		border:none;
+		background: none;
+		cursor: pointer;
+		display: none;
+	}
+	.icon-mobile-nav{
+		height: 4.8rem;
+		width: 4.8rem;
+		color: #333333;
+	}
+	.section-hero{
+		background: #F8F9FA;
+	}
+	.hero{
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		grid-template-columns: 85fr 15fr;
+		padding-top: 50rem;
+	}
+	.hero-text-box{
+		transform: translate(0,-9.6rem);
+	}
+	.hero-greet{
+		font-size: 2rem;
+		margin-bottom: 3.2rem;
+		font-weight: 600;
+		color:#9CA534;
+		padding-left: 3px;
+	}
+	.hero-name{
+		font-size: 5.2rem;
+		line-height: 1.05;
+		margin-bottom: 3.2rem;
+		letter-spacing: -1px;
+	}
+	.hero-job{
+		color: #645757;
+		font-size: 5.2rem;
+		font-weight: 700;
+		line-height: 1.05;
+		margin-bottom:3.2rem;
+		letter-spacing:-1px;
+	}
+	.hero-description{
+		font-size: 2rem;
+		line-height: 1.6;
+		margin-bottom: 4.8rem;
+	}
+	.hero-img{
+		width: 100%;
+		margin: 0 auto;
+		border-radius: 10px;
+	}
+	.hero-logos{
+		justify-self: end;
+		align-items: center;
+	}
+	.hero-logos-bars{
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+		transform: translate(0, -9.6rem);
+	}
+	.hero-logo{
+		height: 3.2rem;
+		color:#6f6f6f;
+		width:3.2rem;
+		transition: all 0.3s;
+	}
+	.hero-logo:hover,
+	.hero-logo:active{
+		color:#4DABF7;
+	}
+	.hero-logo:focus{
+		box-shadow: none;
+	}
+	@media (max-width: 78em) {
+	  .hero {
+		max-width: 110rem;
+	  }
+
+	  .hero-greet {
+		font-size: 1.8rem;
+	  }
+	  .hero-name {
+		font-size: 4.4rem;
+	  }
+	  .hero-job {
+		font-size: 4.4rem;
+	  }
+	}
+	@media (max-width: 73em) {
+	  html {
+		font-size: 56.25%;
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+	  }
+
+	  .subheading {
+		font-size: 1.6rem;
+	  }
+
+	  .heading-secondary {
+		font-size: 3.6rem;
+		margin-bottom: 8rem;
+	  }
+
+	  .testimonial-heading {
+		font-size: 3.6rem;
+	  }
+	}
+	.btn--full{
+		color: #FFFFFF;
+		font-size: 1rem;
+		font-style: normal;
+		background: #4DABF7;
+		margin: 0px 12.8px 0px 0px;
+		padding: 12.8px 25.6px;
+	}
+	.btn--full:link,
+	.btn--full:visited{
+		background-color:#4DABF7;
+		color: #FFFFFF;
+	}
+	.btn--full:hover,
+	.btn--full:active{
+		background-color: #278DDE;
+	}
+	@media (max-width:78em){
+		.hero{
+			max-width: 110rem;
+		}
+		.hero-greet{
+			font-size: 1.8rem;
+		}
+		.hero-name{
+			font-size: 4.4rem;
+		}
+		.hero-job{
+			font-size: 4.4rem;
+		}
+	}
+	.container{
+		max-width: 120rem;
+		padding: 0 3.2rem;
+		margin: 0 auto;
+	}
+	.grid{
+		display: grid;
+		column-gap: 6.4rem;
+		row-gap:9.6rem;
+	}
+	.heading-ternary {
+	  font-weight: 700;
+	  color: #313131;
+	  letter-spacing: -0.5;
+	}
+
+	.heading-primary {
+	  font-size: 6.2rem;
+	  line-height: 1.05;
+	  margin-bottom: 3.2rem;
+	  letter-spacing: -1px;
+	}
+
+	.heading-secondary {
+	  font-size: 4.4rem;
+	  line-height: 1.2;
+	  margin-bottom: 9.6rem;
+	}
+
+	.heading-ternary {
+	  font-size: 3rem;
+	  line-height: 1.2;
+	  margin-bottom: 3.2rem;
+	}
+
+	.heading-small {
+	  font-size: 3rem;
+	  font-weight: 600;
+	  padding-bottom: 0.8rem;
+	}
+
+	.subheading {
+	  display: block;
+	  font-size: 1.8rem;
+	  font-weight: 600;
+	  color: #3e89c6;
+	  text-transform: uppercase;
+	  margin-bottom: 1.6rem;
+	  letter-spacing: 0.75px;
+	  padding-left: 3px;
+	}
+	.btn,
+	.btn:link,
+	.btn:visited {
+	  display: inline-block;
+
+	  text-decoration: none;
+	  font-size: 2rem;
+	  font-weight: 600;
+	  padding: 1.6rem 3.2rem;
+	  border-radius: 100px;
+
+	  transition: all 0.3s;
+	}
+
+	.btn--full:link,
+	.btn--full:visited {
+	  background-color: #4dabf7;
+	  color: #fff;
+	}
+
+	.btn--full:hover,
+	.btn--full:active {
+	  background-color: #2e6794;
+	}
+
+	.btn--outline:link,
+	.btn--outline:visited {
+	  color: #313131;
+	}
+
+	.btn--outline:hover,
+	.btn--outline:active {
+	  background-color: #f5f5f7;
+	  box-shadow: inset 0 0 0 3px #0466c8;
+	}
+	.section-about{
+		padding: 9.6rem 0;
+	}
+	.profile-img-box{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.profile-img-box::after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-51%,-41%);
+		background-color: #6D5AA2;
+		height: 100%;
+		width: 82%;
+		z-index: -1;
+	}
+	.profile-img{
+		width: 80%;
+		border-top-right-radius: 50px;
+		border-bottom-left-radius: 50px;
+	}
+	.profile-description{
+		font-size: 2re,;
+		line-height: 1.6;
+		padding-top: 1.6rem;
+	}
+	@media (max-width: 66.25em) {
+	  html {
+		font-size: 50%;
+	  }
+
+	  .header {
+		overflow-x: hidden;
+	  }
+	  /* MOBILE NAVIGATION */
+	  .btn-mobile-nav {
+		display: block;
+		z-index: 9999;
+	  }
+
+	  .main-nav {
+		background-color: rgba(255, 255, 255, 0.9);
+
+		backdrop-filter: blur(10px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		transform: translateX(100%);
+		z-index: 9999;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.5s ease-in;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	  }
+	  .nav-open .main-nav {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		transform: translateX(0);
+	  }
+	  .nav-open .icon-mobile-nav[name="close-outline"] {
+		display: block;
+	  }
+	  .nav-open .icon-mobile-nav[name="menu-outline"] {
+		display: none;
+	  }
+	  .main-nav-list {
+		flex-direction: column;
+		gap: 4.8rem;
+	  }
+	  .main-nav-link:link,
+	  .main-nav-link:visited {
+		font-size: 3rem;
+	  }
+	  .modal {
+		top: 15%;
+		left: 15%;
+		transform: translate(0, 0);
+	  }
+	}
+	@media (max-width: 58.75em) {
+	  .main-nav {
+		overflow-x: hidden;
+	  }
+	  .grid {
+		column-gap: 4.8rem;
+	  }
+
+	  .grid--3-cols {
+		grid-template-columns: repeat(2, 1fr);
+	  }
+	  .grid--2-cols {
+		gap: 3.2rem;
+	  }
+	  .portfolio-project:not(:last-child) {
+		max-width: 80%;
+		justify-self: center;
+	  }
+	  .portfolio-project:last-child {
+		max-width: 40%;
+		grid-column: 1/-1;
+		justify-self: center;
+	  }
+	  .about-description,
+	  .strong-description,
+	  .where-description,
+	  .where-description {
+		font-size: 1.8rem;
+	  }
+	  .skill-icon {
+		font-size: 6.2rem;
+	  }
+	  .strong-list-description-heading {
+		font-size: 2rem;
+	  }
+	  .strong-list-description-text {
+		font-size: 1.4rem;
+	  }
+	  .footer-grid {
+		column-gap: 3.2rem;
+	  }
+	  .footer-heading {
+		font-size: 1.6rem;
+		margin-bottom: 2.4rem;
+		}
+	  .footer-text {
+		font-size: 1.2rem;
+	  }
+	  .footer-logos {
+		gap: 1.6rem;
+	  }
+	  .copyright {
+		margin-top: 4.8rem;
+	  }
+	  .footer-nav-links {
+		gap: 2.4rem;
+	  }
+
+	  .footer-nav-link {
+		font-size: 1.6rem;
+	  }
+	  .btn-resource {
+		padding: 0.8rem 1.6rem;
+	  }
+	  .resources-list-description-text {
+		font-size: 1.2rem;
+	  }
+	  .overlay {
+		width: 50%;
+	  }
+	}
+	.about-skills {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 2.4rem;
+	}
+
+	.about-heading {
+	  display: block;
+	  position: relative;
+	  text-align: left;
+	  width: 100%;
+	}
+	.about-heading::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+	  height: 2px;
+	  width: 16%;
+	  border-bottom: 4px solid #4dabf7;
+	  border-radius: 5px;
+	}
+	.about-heading::before {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+	  height: 1px;
+	  width: 19%;
+	  border-bottom: 4px dotted #4dabf7;
+	  border-radius: 5px;
+	}
+	.about-skill-heading {
+	  padding-bottom: 0.2rem;
+	  position: relative;
+	}
+	.about-skill-heading::before {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+	  height: 1px;
+	  width: 23%;
+	  border-bottom: 4px dotted #4dabf7;
+	  border-radius: 5px;
+	}
+	.about-skill-heading::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+	  height: 2px;
+	  width: 20%;
+	  border-bottom: 4px solid #4dabf7;
+	  border-radius: 5px;
+	}
+	.about-description {
+	  font-size: 2rem;
+	  line-height: 1.6;
+	}
+
+	.about-skill-heading {
+	  margin-top: 2.4rem;
+	  font-size: 2.4rem;
+	  font-weight: 600;
+	}
+	.about-skill-box {
+	  margin-top: 2.4rem;
+	}
+	.about-skill-list {
+	  list-style-type: none;
+	  display: flex;
+	  gap: 3.2rem;
+	}
+	.skill-list-item {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.htm5-logo {
+	  color: #f38454;
+	}
+	.css3-logo {
+	  color: #5484f4;
+	}
+	.section {
+	  transition: transform 1s, opacity 1s;
+	}
+	.section--hidden {
+	  opacity: 0;
+	  transform: translateY(8rem);
+	}
+	.margin-right-sm {
+	  margin-right: 1.6rem !important;
+	}
+	.center-text {
+	  text-align: center;
+	}
+	.highlight {
+	  position: relative;
+	  color: #fff;
+	}
+	.highlight::after {
+	  display: block;
+	  content: "";
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  z-index: -1;
+	  opacity: 0.7;
+	  transform: scale(1.07, 1.1);
+	  border-top-right-radius: 30px;
+	  border-bottom-left-radius: 30px;
+	  background-image: linear-gradient(
+		90deg,
+		hsla(207, 91%, 64%, 1) 0%,
+		hsla(207, 92%, 67%, 1) 100%
+	  );
+	}
+	.color-1 {
+	  background-color: #459ade !important;
+	}
+	.color-2 {
+	  background-color: #3e89c6 !important;
+	}
+	.color-3 {
+	  background-color: #3678ad !important;
+	}
+	.color-4 {
+	  background-color: #59a4eb !important;
+	}
+	.color-5 {
+	  background-color: #7197d3 !important;
+	}
+	.color-6 {
+	  background-color: #8a89ba !important;
+	}
+	.color-7 {
+	  background-color: #a27ca2 !important;
+	}
+	.strong {
+	  font-weight: 500;
+	}
+	.hidden {
+	  visibility: hidden;
+	  opacity: 0;
+	}
+	.margin-bottom-sm {
+	  margin-bottom: 3.2rem;
+	}
+	.strong-description {
+	  font-size: 2rem;
+	  line-height: 1.6;
+	  text-align: left;
+	  margin-bottom: 3.2rem;
+	}
+	.strong-list {
+	  list-style: none;
+	  display: flex;
+	  flex-direction: column;
+	  gap: 2.4rem;
+	}
+	.strong-list-item {
+	  display: flex;
+	  align-items: center;
+	}
+	.strong-list-description-heading {
+	  font-size: 2.4rem;
+	  font-weight: 600;
+	  margin-bottom: 1.2rem;
+	}
+	.strong-list-description-text {
+	  font-size: 1.6rem;
+	  line-height: 1.6;
+	}
+	.strong-list-logo-box {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  padding: 1.2rem 1.8rem;
+	  margin-right: 2.4rem;
+	  background-color: #4dabf7;
+	  height: 7rem;
+	  width: 7rem;
+	  border-radius: 9px;
+	  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+		rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	  /* border-top-right-radius: 14px;
+	  border-bottom-left-radius: 14px; */
+	  color: #fff;
+	}
+	</style>
+<body>
+	<header>
+		<a href="#" class="logo">TH</a>
+		
+		<nav class="mai-nav">
+			<ul class="main-nav-list">
+				<li>
+					<a href="#about" class="main-nav-link">About</a>
+				</li>
+				<li>
+					<a href="#porfile" class="main-nav-link">Porfile</a>
+				</li>
+				<li>
+					<a href="#contact" class="main-nav-link">Contact</a>
+				</li>
+			</ul>
+		</nav>
+			
+	</header>
+	<main>
+		<!--HERO SECTION -->
+		<section class="section-hero">
+			<div class="hero container">
+				<div class="hero-text-box">
+					<p class="hero-greet">Hello, My name is</p>
+					<h1 class="hero-name">Huynh Ngoc Minh Thu</h1>
+					<p class="hero-job">
+						Mình là Junior <span class="highligt">Web Design</span></p>
+					<p class="hero-description">
+						Mình đến từ Sài Gòn - một thành phố có hoàng hôn tuyệt đẹp. Mình yêu thích thiết kế giao diện, nghe nhạc, đọc sách chơi game và vẽ. Đặc biệt không thể thiếu tài nấu ăn và mình có thể nấu cả món Á lẫn Âu.
+					</p>
+					<a href="" class="btn btn--full margin-right-sm" id="contact">Contact</a>
+				</div>
+				
+				<div class="hero-logos">
+					<ul class="hero-logos-bars">
+						<li>
+							<a href="https://www.facebook.com/hnm.thuu" target="_blank">
+								<ion-icon name="logo-facebook" class="hero-logo"></ion-icon></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/hnm.thuu/" target="_blank"><ion-icon name="logo-insta" class="hero-logo"></ion-icon></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- ABOUT SECTION -->
+		<section class="section section-about" id="about">
+			<div class="container">
+				<span class="subheading">ABOUT</span>
+				<p class="heading-secondary">Những thông tin về mình mà mọi người cần biết</p>
+			</div>
+			<div class="about-container container grid grid--2-cols margin-bottom-sm">
+			<div class="profile-img-box">
+					<img src="../image/profile-picture.jpg"
+						 class="profile-img"
+						 alt="Profile Picture"/>
+				</div>
+				<div class="about-skill">
+					<div class="about-heading heading-small">
+						<span class="about-heading-text">Mình là người như thế nào</span>
+					</div>
+					<div class="about-description">
+					<p>
+						Ngoài tên ba mẹ đặt ra, tên tiếng Anh của mình là Tracy. Không biết vì lý do làm sao mà mình có thể bén duyên đến ngành học này. Mình còn tìm hiểu rất nhiều ngành khác và đang trong quá trình tự học.
+					</p>
+					<p class="about-skill-heading">SKILL</p>
+					<div class="about-skill-box">
+						<ul class="about-skill-list">
+							<li class="skill-list-item">
+								<ion-icon
+									name="logo-html5"
+									class="skill-icon htm5-logo"></ion-icon>
+								<span>HTML5</span>
+							</li>
+							<li class="skill-list-item">
+								<ion-icon
+									name="logo-css3"
+									class="skill-icon css3-logo"></ion-icon>
+								<span>CSS3</span>
+							</li>
+							<li class="skill-list-item">
+								<ion-icon
+									name="logo-javascript"
+									class="skill-icon javascript-logo"></ion-icon>
+							<span>JavaScript</span>
+							</li>
+						</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-strong margin-bottom-sm">
+				<div class="strong-container container grid grid--2-cols">
+					<div class="strong-text-box">
+						<div class="strong-heading">
+							<span class="strong-heading-text heading-small">Mình biết những gì?</span>
+						</div>
+						<div class="strong-description">
+							Biết một chút về Photoshop, edit chỉnh ảnh, vẽ và nói chung về nghệ thuật. Mình muốn đưa một chút thẩm mỹ đến với việc viết code khiến nó trở nên phong phú và hoa mỹ hơn.
+						</div>
+						<ul class="strong-list">
+							<li class="strong-list-item">
+								<div class="strong-list-logo-box color-1">
+									<ion-icon
+										name="color-palette"
+										class="strong-list-logo"></ion-icon>
+								</div>
+							</li>
+						</ul>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
