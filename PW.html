@@ -635,9 +635,131 @@
 	  border-radius: 9px;
 	  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
 		rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-	  /* border-top-right-radius: 14px;
-	  border-bottom-left-radius: 14px; */
 	  color: #fff;
+	}
+	.strong-list-logo{
+		font-size: 3.2rem;
+	}
+	.strong-img-box{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.strong-img-box{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.strong-img{
+		width: 60%;
+	}
+	.about-where{
+		padding-bottom: 9.6rem;
+	}
+	.where-img-box{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.where-img{
+		width: 60%;
+	}
+	.where-heading{
+		margin-bottom: 2.4rem;
+	}
+	.where-heading-text{
+		position: relative;
+	}
+	.where-heading-text::after{
+		content: "";
+		position:absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 20%;
+		border-bottom: 4px #66299F;
+		border-radius: 5px;
+	}
+	.where-heading-text::before{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 37%;
+		border-bottom: 4px #4242BA;
+		border-radius: 5px;
+	}
+	.where-description{
+		font-size: 2rem;
+		line-height: 1.6;
+		text-align: left;
+		margin-bottom: 4.8rem;
+	}
+	.where-logos-box{
+	  margin-bottom: 4.8rem;
+	}
+
+	.where-logos {
+	  display: flex;
+	  gap: 3.2rem;
+
+	  align-items: center;
+	}
+
+	.where-logo-img {
+	  width: 35%;
+	  filter: brightness(0.75);
+	  opacity: 50%;
+	}
+	.where-resources {
+	  width: 100%;
+	  background-color: #fff;
+	  border: 3px dashed #27567c;
+	  padding-bottom: 3.2rem;
+	  border-radius: 3rem;
+	  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	}
+
+	.how-heading {
+	  margin-bottom: 2.4rem;
+	}
+
+	.how-heading-text {
+	  position: relative;
+	}
+
+	.how-heading-text::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+	  height: 1px;
+	  width: 22%;
+	  border-bottom: 4px solid #4dabf7;
+	  border-radius: 5px;
+	}
+
+	.how-heading-text::before {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+	  height: 1px;
+	  width: 27%;
+	  border-bottom: 4px dotted #4dabf7;
+	  border-radius: 5px;
+	}
+
+	.how-img-box {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	.how-img {
+	  width: 80%;
 	}
 	</style>
 <body>
@@ -695,7 +817,7 @@
 			</div>
 			<div class="about-container container grid grid--2-cols margin-bottom-sm">
 			<div class="profile-img-box">
-					<img src="../image/profile-picture.jpg"
+					<img src="../../image/profile-picture.jpg"
 						 class="profile-img"
 						 alt="Profile Picture"/>
 				</div>
@@ -749,9 +871,71 @@
 										name="color-palette"
 										class="strong-list-logo"></ion-icon>
 								</div>
+								<div class="strong-list-description">
+									<p class="strong-list-description-heading">Thiết Kế UI/UX</p>
+									<span class="strong-list-description-text">Thiết kế giao diện bắt mắt, dễ sử dụng là điều khiến mọi người sẽ luôn nhớ đến trang web của bản thân.</span>
+								</div>
+							</li>
+							<li class="strong-list-item">
+								<div class="strong-list-logo-box">
+									<ion-icon name="layers" class="strong-list-logo"></ion-icon>
+								</div>
+								<div class="strong-list-description">
+									<p class="strong-list-description-heading">
+										Chỉnh sửa Photoshop
+									</p>
+									<span class="strong-list-description-text">Không chỉ riêng thiết kế trang web, chỉnh sửa ảnh để trông có thể đẹp hơn và có sức sống hơn.</span>
+								</div>
+							</li>
+							<li class="strong-list-item">
+								<div class="strong-list-logo-box color-2">
+									<ion-icon name="flash" class="strong-list-logo"></ion-icon>
+								</div>
+								<div class="strong-list-description">
+									<p class="strong-list-description-heading">Nhanh</p>
+									<span class="strong-list-description-text">Tốc độ để một trang web loading cũng rất quan trọng trong việc trải nghiệm người dùng và được tối ưu hóa một cách đáng kể.</span>
+								</div>
 							</li>
 						</ul>
-					
+					</div>
+					<div class="strong-img-box">
+						<img src="../../image/web-design.jpg"
+							 alt="Illustration of coding"
+							 class="strong-img"/>
+					</div>
+				</div>
+			</div>
+			
+			<div class="about-where margin-bottom-sm">
+				<div class="where-container container grid grid--2-cols">
+					<div class="where-img-box">
+						<img src="../../image/where-web-design.jpg"
+							 alt="Illustration of study"
+							 class="where-img"/>
+					</div>
+					<div class="where-text-box">
+						<div class="where-heading">
+							<span class="where-heading-text heading-small">Mình học từ đâu?</span>
+						</div>
+						<div class="where-description">
+							Mình bắt đầu từ một con số 0. Lúc đầu sẽ rất chơi vơi và khó định hướng được cho bản thân rằng học ở đâu sẽ giúp mình có trải nghiệm tốt nhất. Mình vẫn đang tìm hiểu xem nơi nào có thể mang lại hiểu quả tốt nhất cho bản thân mình.
+						</div>
+						<div class="where-logos-box">
+							<div class="where-logos">
+								<img src="../../image/hoc-online.jpg"
+								class="where-logo-img"
+								alt="online-logo"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-how margin-bottom-sm">
+				<div class="how-container container grid grid--2-cols">
+					<div class="how-text-box">
+						<div class="how-heading">
+							<span class="how-heading-text heading-small">Mình viết code như thế nào</span>
+						</div>
 					</div>
 				</div>
 			</div>
